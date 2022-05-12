@@ -1,4 +1,30 @@
 .special {
-    color: rgb(34, 230, 109);
+    color: rgb(60, 170, 233);
     font-weight: bold;
 }
+
+h2 {
+    background: #dfefff;
+    box-shadow: 0px 0px 0px 5px #dfefff;
+    border: dashed 1px #96c2fe;
+    padding: 0.2em 0.5em;
+    color: #454545;
+  }
+
+p {
+    color: #0b0b0c;/*文字色*/
+    /*線の種類（点線）2px 線色*/
+    border-bottom: dashed 2px #6594e0;
+  }
+
+  a:link {
+    color: rgb(238, 82, 173);
+  }
+  
+  a:visited {
+    color: rgb(92, 200, 243);
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
