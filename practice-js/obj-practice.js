@@ -20,6 +20,6 @@ console.log(campus.address);
 for (let b of campus.buildingD) {
 	console.log(b);
 }
-for (let n of gakka) {
+for (let g of gakka) {
 	console.log(g.name);
 }
