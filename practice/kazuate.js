@@ -17,9 +17,10 @@ function hantei() {
     let yoso = 4;       // 第5回課題:テキストボックスの数値をここに代入
 
     for (let i = 0; i < 10; i++) {
+        kotae = 4;
         kaisu = kaisu + 1;
         console.log(kaisu + "回目の予想: " +yoso);// 課題3-1：ここの判定処理を作成する．
-        if (kaisu > 4) {
+        if (kaisu > 3) {
             console.log("答えは" + kotae + "でした.すでにゲームは終わっています.");
         } else if (kotae === yoso) {
             console.log("正解です.おめでとう!");
