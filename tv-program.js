@@ -81,3 +81,4 @@ let data = {
 
 /////////////////// 課題3-2 はここから書き始めよう
 
+console.log(date.title);
