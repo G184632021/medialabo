@@ -5,7 +5,12 @@ let li;
 li = document.createElement('li');
 li.textContent = 'アジア大陸';
 ul.insertAdjacentElement('beforeend', li);
-
+li = document.createElement('li');
+li.textContent = 'ヨーロッパ大陸';
+ul.insertAdjacentElement('beforeend', li);
+let h2s = document.querySelectorAll('h2');
+for(let h2 of h2s) {
+    h2.style.Color = 'palegreen';
 
 // id が sevenOcean の h2 要素を検索
 // （次の行を完成させる）
