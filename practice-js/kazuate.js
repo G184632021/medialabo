@@ -37,11 +37,12 @@ function hantei() {
 
     //        ページに表示する方法はまだ習っていないので
     //        判定結果はコンソールに出力すること
-}
 
-let s = document.querySelector('span#kaisu');
+
+/*let s = document.querySelector('span#kaisu');
 s.textContent = kaisu;
 let t = document.querySelector('span#yoso');
 t.textContent = yoso;
 let k = document.querySelector('span#kotae');
 k.textContent = kotae;
+*/
