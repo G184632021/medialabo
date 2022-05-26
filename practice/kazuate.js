@@ -8,18 +8,15 @@ let kaisu = 0;
 // 予想を4回実行する
 // 将来: ボタンを押したら， hantei() を呼び出すように修正する
 hantei();
-hantei();
-hantei();
-hantei();
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
-    let yoso = 4;       // 第5回課題:テキストボックスの数値をここに代入
+    let yoso = 4;       
 
     for (let i = 0; i < 10; i++) {
         kotae = 4;
         kaisu = kaisu + 1;
-        console.log(kaisu + "回目の予想: " +yoso);// 課題3-1：ここの判定処理を作成する．
+        console.log(kaisu + "回目の予想: " +yoso);
         if (kaisu > 3) {
             console.log("答えは" + kotae + "でした.すでにゲームは終わっています.");
         } else if (kotae === yoso) {
