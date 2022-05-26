@@ -13,7 +13,7 @@ b.addEventListener('click', hantei);
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
-    let yosi = document.querySelector('span#pre');       // 第5回課題:テキストボックスの数値をここに代入
+    let i = document.querySelector('input[name="num"]');       // 第5回課題:テキストボックスの数値をここに代入
     let num = i.value;
     let yoso = Math.floor(num);
 
