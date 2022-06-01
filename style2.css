@@ -33,3 +33,8 @@ table {
 table {
     border-collapse:  collapse;     
 }
+
+table th{
+    color: #152ae9;
+    background: #73b7f0;
+  }
