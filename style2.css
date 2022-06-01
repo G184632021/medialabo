@@ -24,3 +24,12 @@ table {
   th, td {
     padding: 10px;
   }
+
+
+  th,td {
+    border: solid 1px;              
+}
+ 
+table {
+    border-collapse:  collapse;     
+}
