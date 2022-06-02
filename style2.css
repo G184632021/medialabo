@@ -1,3 +1,9 @@
+h1{
+  padding: 0.5em;
+  color: #42575a;
+  background: #83cdf0;
+}
+
 table {
     table-layout: fixed;
     width: 32%;
