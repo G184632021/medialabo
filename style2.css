@@ -3,6 +3,9 @@ h1{
   color: #42575a;
   background: #83cdf0;
 }
+body{
+  background-color: rgb(201, 231, 248);
+}
 
 table {
     table-layout: fixed;
@@ -24,7 +27,7 @@ table {
   }
   
   thead th:nth-child(4) {
-    width: 35%;
+    width: 50%;
   }
   
   th, td {
@@ -37,7 +40,9 @@ table {
 }
  
 table {
-    border-collapse:  collapse;     
+    border-collapse:  collapse;
+    text-align: center;
+    width:600px
 }
 
 table th{

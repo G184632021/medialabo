@@ -42,13 +42,14 @@ function showResult(resp) {
     if(thanneru === "g1") {
         for (let n of data.list.g1) {
             console.log(n.title);
-            
+            let p = document.createElement('p');
           }
     } else {
         for (let m of data.list.e1) {
             console.log(m.title);
         }
     }
+
     
 }
 
