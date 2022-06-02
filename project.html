@@ -3,52 +3,67 @@
     <head>
         <script src="tv-program.js"></script>
         <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+        <script src="project.js" defer></script>
         <meta charset="utf-8">
         <teitle><h1>NHK の番組表</h1></teitle>
 
+    </head>
+
         <body>
-            <label for="shimei">チャンネル: </label>
-            <input type="number" name="shimei" id="shimei" size="10">
+            <div>
+                <label for="shimei">チャンネル: </label>
+                <input type="radio" id="contactChoice1"
+                name="a" value="g1">
+                <label for="contactChoice1">g1</label>
+                <input type="radio" id="contactChoice1"
+                name="a" value="e1">
+                <label for="contactChoice1">e1</label>
+            </div>
+            
+            <div>
+                <label for="shimei">番組: </label>
+                <input type="radio" id="a"
+                name="b" value="0000">
+                <label for="contactChoice1">0000</label>
+                <input type="radio" id="a"
+                name="b" value="0100">
+                <label for="contactChoice1">0100</label>
+                <input type="radio" id="a"
+                name="b" value="0205">
+                <label for="contactChoice1">0205</label>
+                <input type="radio" id="a"
+                name="b" value="0300">
+                <label for="contactChoice1">0300</label>
+                <input type="radio" id="a"
+                name="b" value="0409">
+                <label for="contactChoice1">0409</label>
+                <input type="radio" id="a"
+                name="b" value="0502">
+                <label for="contactChoice1">0502</label>
+                <input type="radio" id="a"
+                name="b" value="0600">
+                <label for="contactChoice1">0600</label>
+                <input type="radio" id="a"
+                name="b" value="0700">
+                <label for="contactChoice1">0700</label>
+                <input type="radio" id="a"
+                name="b" value="0800">
+                <label for="contactChoice1">0800</label>
+                <input type="radio" id="a"
+                name="b" value="0903">
+                <label for="contactChoice1">0903</label>
+                <input type="radio" id="a"
+                name="b" value="1000">
+                <label for="contactChoice1">1000</label>
+                <input type="radio" id="a"
+                name="b" value="1100">
+                <label for="contactChoice1">1100</label>
+            </div>
+
+
             <button id="print">表示</button>
             
-            
-        </body>
-
-        
-        </head>
-
-        <h1>番組情報</h1>
-
-        <h2>番組を選択する</h2>
-
-        <p>
-            <imput type="heckbox" name="ニュース・報道" id="0000" value="0000">
-            <lable for="0000">ニュース・報道</lable>
-            <imput type="heckbox" name="スポーツ" id="0100" value="0100">
-            <lable for="0100">スポーツ</lable>
-            <imput type="heckbox" name="情報・ワイドショー" id="0205" value="0205">
-            <lable for="0205">情報・ワイドショー</lable>
-            <imput type="heckbox" name="ドラマ" id="0300" value="0300">
-            <lable for="0300">ドラマ</lable>
-            <imput type="heckbox" name="音楽" id="0409" value="0409">
-            <lable for="0409">音楽</lable>
-            <imput type="heckbox" name="バラエティ" id="0502" value="0502">
-            <lable for="0502">バラエティ</lable>
-            <imput type="heckbox" name="映画" id="0600" value="0600">
-            <lable for="0600">映画</lable>
-            <imput type="heckbox" name="アニメ" id="0700" value="0700">
-            <lable for="0700">アニメ</lable>
-            <imput type="heckbox" name="ドキュメンタリー・教養" id="0800" value="0800">
-            <lable for="0800">ドキュメンタリー・教養</lable>
-            <imput type="heckbox" name="劇場・公演" id="0903" value="0903">
-            <lable for="0903">劇場・公演</lable>
-            <imput type="heckbox" name="趣味・教育" id="1000" value="1000">
-            <lable for="1000">趣味・教育</lable>
-            <imput type="heckbox" name="福祉" id="1100" value="1100">
-            <lable for="1100">福祉</lable>
-
-            <p><button id="answer">回答する</button></p>
-        </p>
 
         <table>
             <link href="style2.css" rel="stylesheet" type="text/css">
@@ -87,6 +102,9 @@
             
 
         </table>
+
+
+        </body>
     
 
 
