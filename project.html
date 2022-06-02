@@ -17,16 +17,74 @@
         
         </head>
 
-        <p>番組情報</p>
+        <h1>番組情報</h1>
+
+        <h2>番組を選択する</h2>
+
+        <p>
+            <imput type="heckbox" name="ニュース・報道" id="0000" value="0000">
+            <lable for="0000">ニュース・報道</lable>
+            <imput type="heckbox" name="スポーツ" id="0100" value="0100">
+            <lable for="0100">スポーツ</lable>
+            <imput type="heckbox" name="情報・ワイドショー" id="0205" value="0205">
+            <lable for="0205">情報・ワイドショー</lable>
+            <imput type="heckbox" name="ドラマ" id="0300" value="0300">
+            <lable for="0300">ドラマ</lable>
+            <imput type="heckbox" name="音楽" id="0409" value="0409">
+            <lable for="0409">音楽</lable>
+            <imput type="heckbox" name="バラエティ" id="0502" value="0502">
+            <lable for="0502">バラエティ</lable>
+            <imput type="heckbox" name="映画" id="0600" value="0600">
+            <lable for="0600">映画</lable>
+            <imput type="heckbox" name="アニメ" id="0700" value="0700">
+            <lable for="0700">アニメ</lable>
+            <imput type="heckbox" name="ドキュメンタリー・教養" id="0800" value="0800">
+            <lable for="0800">ドキュメンタリー・教養</lable>
+            <imput type="heckbox" name="劇場・公演" id="0903" value="0903">
+            <lable for="0903">劇場・公演</lable>
+            <imput type="heckbox" name="趣味・教育" id="1000" value="1000">
+            <lable for="1000">趣味・教育</lable>
+            <imput type="heckbox" name="福祉" id="1100" value="1100">
+            <lable for="1100">福祉</lable>
+
+            <p><button id="answer">回答する</button></p>
+        </p>
+
         <table>
+            <link href="style2.css" rel="stylesheet" type="text/css">
             <tr>
-                <td>項目名</td>
-                <td>項目名の説明</td>
+                <th>項目名</th>
+                <th>項目名の説明</th>
+            </tr>
+            <tr>
+                <td>start_time</td>
+                <td>番組開始時刻</td>
+            </tr>
+            <tr>
+                <td>end_time</td>
+                <td>番組終了時刻</td>
+            </tr>
+            <tr>
+                <td>service.name</td>
+                <td>チャンネル</td>
             </tr>
             <tr>
                 <td>title</td>
                 <td>番組名</td>
             </tr>
+            <tr>
+                <td>subtitle</td>
+                <td>番組サブタイトル</td>
+            </tr>
+            <tr>
+                <td>content</td>
+                <td>番組説明文</td>
+            </tr>
+            <tr>
+                <td>act</td>
+                <td>出演者</td>
+            </tr>
+            
 
         </table>
     
