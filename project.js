@@ -1,37 +1,134 @@
 let b = document.querySelector('#print');
 b.addEventListener('click', greeting);
 
-let thanneru;
+let kaisu = 0;
+let tyanneru;
 let bangumi;
 
 function greeting() {
-let i = document.querySelectorAll('input[name="a"]');
+let c = document.querySelectorAll('input[name="a"]');
 
-for (let r of i) {
+for (let r of c) {
     if (r.checked) {       
-        thanneru = r.value;
+        tyanneru = r.value;
     }
 }
 
-let n = document.querySelectorAll('input[name="b"]');
-for (let l of n) {
+let b = document.querySelectorAll('input[name="b"]');
+for (let l of b) {
     if (l.checked) {        
         bangumi = l.value;
     }
 }
 
-let url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/' + thanneru + '-' + bangumi + '-j.json';
+let url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/' + tyanneru + '-' + bangumi + '-j.json';
 axios.get(url)
         .then(showResult)   
         .catch(showError)   
         .then(finish);
 }
-function showResult(resp) {
-    // サーバから送られてきたデータを出力
+function kensaku(resp) {
+    let c = document.querySelectorAll('input[name="a"]');
+    let tyanneru = r.value;
     let data = resp.data;
-
-    // data が文字列型なら，オブジェクトに変換する
+    if (kaisu > 0) {
+        let table = document.querySelectorAll('table');
+        table.remove()
+    }
     if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+    let table, tr1,th1,th2,th3,th4,tr2,th;
+    let mi = ['番組名','サブタイトル','出演者','番組説明文'];
+    let ul = document.querySelector('ul');
+    
+    //for (let x of data.list){
+
+        if (tyanneru === 'g1') {
+            if (data.list === null) {
+                let p = document.createElement('p');
+                p.textContent = "そのジャンルの番組はありません。";
+                ul.insertAdjacentElement('afterend' , p);
+            } else {
+                let o = data.list.g1;
+
+            for (let i = 0; i < o.length; i++) {
+                table = document.createElement('table');
+                ul.insertAdjacentElement('afterend' , table);
+                tr2 = document.createElement('tr');
+                table.insertAdjacentElement('beforeend' , tr2);
+
+                for (let x of mi) {
+                    th = document.createElement('th');
+                    th.textContent = x;
+                    tr2.insertAdjacentElement('beforeend' , th);
+                }
+
+                tr1 = document.createElement('tr');
+                table.insertAdjacentElement('beforeend' , tr1);
+                th1 = document.createElement('th');
+                th1.textContent = x[i].title;
+                tr1.insertAdjacentElement('beforeend' , th1)
+                th2 = document.createElement('th');
+                th2.textContent = x[i].subtitle;
+                tr1.insertAdjacentElement('beforeend' , th2)
+                th3 = document.createElement('th');
+                th3.textContent = x[i].act;
+                tr1.insertAdjacentElement('beforeend' , th3)
+                th4 = document.createElement('th');
+                th4.textContent = x[i].content;
+                tr1.insertAdjacentElement('beforeend' , th4)
+            }
+        }
+    } else if (tyanneru === 'e1') {
+        if(data.list === null){
+            let p = document.createElement('p');
+            p.textContent = "そのジャンルの番組はありません。";
+            ul.insertAdjacentElement('afterend' , p);
+        } else {
+            let o = data.list.e1;
+            for (let i = 0; i < o.length; i++) {
+                let ul = document.querySelector('ul');
+                table = document.createElement('table');
+                tr2 = document.createElement('tr');
+                table.insertAdjacentElement('beforeend' , tr2);
+
+                for (let x of mi) {
+                    th = document.createElement('th');
+                    th.textContent = x;
+                    tr2.insertAdjacentElement('beforeend' , th)
+                }
+
+                tr1 = document.createElement('tr');
+                table.insertAdjacentElement('beforeend' , tr1);
+                th1 = document.createElement('th');
+                th1.textContent = x[i].title;
+                tr1.insertAdjacentElement('beforeend' , th1)
+                th2 = document.createElement('th');
+                th2.textContent = x[i].subtitle;
+                tr1.insertAdjacentElement('beforeend' , th2)
+                th3 = document.createElement('th');
+                th3.textContent = x[i].act;
+                tr1.insertAdjacentElement('beforeend' , th3)
+                th4 = document.createElement('th');
+                th4.textContent = x[i].content;
+                tr1.insertAdjacentElement('beforeend' , th4)
+
+            }
+        }
+    }
+}
+
+function showError(err) {
+    console.log(err);
+}
+
+function finish() {
+    console.log('Ajax 通信が終わりました');
+    kaisu = kaisu + 1; 
+}
+    
+ /*   if (typeof data === 'string') {
         data = JSON.parse(data);
     }
 
@@ -62,3 +159,4 @@ function showError(err) {
 function finish() {
     console.log('Ajax 通信が終わりました');
 }
+*/
