@@ -1,4 +1,4 @@
-let b = document.querySelector('#print');
+let b = document.querySelector('button#print');
 b.addEventListener('click', greeting);
 
 let kaisu = 0;
@@ -37,7 +37,7 @@ function kensaku(resp) {
     let tyanneru = b.value;
     let data = resp.data;
     if (kaisu > 0) {
-        let table = document.querySelectorAll('table');
+        let table = document.querySelectorAll('table')
         table1.remove()
     }
     if (typeof data === 'string') {
@@ -71,16 +71,16 @@ function kensaku(resp) {
 
                 tr1 = document.createElement('tr');
                 table.insertAdjacentElement('beforeend' , tr1);
-                th1 = document.createElement('th');
+                th1 = document.createElement('th')
                 th1.textContent = x[i].title;
                 tr1.insertAdjacentElement('beforeend' , th1)
-                th2 = document.createElement('th');
+                th2 = document.createElement('th')
                 th2.textContent = x[i].subtitle;
                 tr1.insertAdjacentElement('beforeend' , th2)
-                th3 = document.createElement('th');
+                th3 = document.createElement('th')
                 th3.textContent = x[i].act;
                 tr1.insertAdjacentElement('beforeend' , th3)
-                th4 = document.createElement('th');
+                th4 = document.createElement('th')
                 th4.textContent = x[i].content;
                 tr1.insertAdjacentElement('beforeend' , th4)
             }
@@ -106,16 +106,16 @@ function kensaku(resp) {
 
                 tr1 = document.createElement('tr');
                 table.insertAdjacentElement('beforeend' , tr1);
-                th1 = document.createElement('th');
+                th1 = document.createElement('th')
                 th1.textContent = x[i].title;
                 tr1.insertAdjacentElement('beforeend' , th1)
-                th2 = document.createElement('th');
+                th2 = document.createElement('th')
                 th2.textContent = x[i].subtitle;
                 tr1.insertAdjacentElement('beforeend' , th2)
-                th3 = document.createElement('th');
+                th3 = document.createElement('th')
                 th3.textContent = x[i].act;
                 tr1.insertAdjacentElement('beforeend' , th3)
-                th4 = document.createElement('th');
+                th4 = document.createElement('th')
                 th4.textContent = x[i].content;
                 tr1.insertAdjacentElement('beforeend' , th4)
 
