@@ -6,9 +6,12 @@ let tyanneru;
 let bangumi;
 
 function greeting() {
+let b = document.querySelectorAll('input[name="b"]');
 let c = document.querySelectorAll('input[name="a"]');
+let tyanneru = b.value;
+let bangumi = c.value;
 
-for (let r of c) {
+/*for (let r of c) {
     if (r.checked) {       
         tyanneru = r.value;
     }
@@ -20,6 +23,7 @@ for (let l of b) {
         bangumi = l.value;
     }
 }
+*/
 
 let url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/' + tyanneru + '-' + bangumi + '-j.json';
 axios.get(url)
@@ -27,13 +31,14 @@ axios.get(url)
         .catch(showError)   
         .then(finish);
 }
+
 function kensaku(resp) {
-    let c = document.querySelectorAll('input[name="a"]');
-    let tyanneru = r.value;
+    let b = document.querySelectorAll('input[name="b"]');
+    let tyanneru = b.value;
     let data = resp.data;
     if (kaisu > 0) {
         let table = document.querySelectorAll('table');
-        table.remove()
+        table1.remove()
     }
     if (typeof data === 'string') {
         data = JSON.parse(data);
