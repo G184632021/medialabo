@@ -23,7 +23,7 @@ for (let l of b) {
 
 let url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/' + tyanneru + '-' + bangumi + '-j.json';
 axios.get(url)
-        .then(showResult)   
+        .then(kensaku)   
         .catch(showError)   
         .then(finish);
 }
