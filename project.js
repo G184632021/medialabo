@@ -1,11 +1,11 @@
 let b = document.querySelector('button#print');
-b.addEventListener('click', greeting);
+b.addEventListener('click', Request);
 
 let kaisu = 0;
-let tyanneru;
-let bangumi;
+//let tyanneru;
+//let bangumi;
 
-function greeting() {
+function Request() {
 let b = document.querySelectorAll('input[name="b"]');
 let c = document.querySelectorAll('input[name="a"]');
 let tyanneru = b.value;
@@ -33,11 +33,11 @@ axios.get(url)
 }
 
 function kensaku(resp) {
-    let b = document.querySelectorAll('input[name="b"]');
+    let b = document.querySelector('input[name="b"]');
     let tyanneru = b.value;
     let data = resp.data;
     if (kaisu > 0) {
-        let table = document.querySelectorAll('table')
+        let table1 = document.querySelectorAll('table')
         table1.remove()
     }
     if (typeof data === 'string') {
@@ -57,71 +57,73 @@ function kensaku(resp) {
             } else {
                 let o = data.list.g1;
 
-            for (let i = 0; i < o.length; i++) {
-                table = document.createElement('table');
-                ul.insertAdjacentElement('afterend' , table);
-                tr2 = document.createElement('tr');
-                table.insertAdjacentElement('beforeend' , tr2);
+        for (let i = 0; i < o.length; i++) {
+    table = document.createElement('table');
+    ul.insertAdjacentElement('afterend' , table);
+    tr2 = document.createElement('tr');
+    table.insertAdjacentElement('beforeend' , tr2);
 
-                for (let x of mi) {
-                    th = document.createElement('th');
-                    th.textContent = x;
-                    tr2.insertAdjacentElement('beforeend' , th);
-                }
-
-                tr1 = document.createElement('tr');
-                table.insertAdjacentElement('beforeend' , tr1);
-                th1 = document.createElement('th')
-                th1.textContent = x[i].title;
-                tr1.insertAdjacentElement('beforeend' , th1)
-                th2 = document.createElement('th')
-                th2.textContent = x[i].subtitle;
-                tr1.insertAdjacentElement('beforeend' , th2)
-                th3 = document.createElement('th')
-                th3.textContent = x[i].act;
-                tr1.insertAdjacentElement('beforeend' , th3)
-                th4 = document.createElement('th')
-                th4.textContent = x[i].content;
-                tr1.insertAdjacentElement('beforeend' , th4)
-            }
-        }
-    } else if (tyanneru === 'e1') {
-        if(data.list === null){
-            let p = document.createElement('p');
-            p.textContent = "そのジャンルの番組はありません。";
-            ul.insertAdjacentElement('afterend' , p);
-        } else {
-            let o = data.list.e1;
-            for (let i = 0; i < o.length; i++) {
-                let ul = document.querySelector('ul');
-                table = document.createElement('table');
-                tr2 = document.createElement('tr');
-                table.insertAdjacentElement('beforeend' , tr2);
-
-                for (let x of mi) {
-                    th = document.createElement('th');
-                    th.textContent = x;
-                    tr2.insertAdjacentElement('beforeend' , th)
-                }
-
-                tr1 = document.createElement('tr');
-                table.insertAdjacentElement('beforeend' , tr1);
-                th1 = document.createElement('th')
-                th1.textContent = x[i].title;
-                tr1.insertAdjacentElement('beforeend' , th1)
-                th2 = document.createElement('th')
-                th2.textContent = x[i].subtitle;
-                tr1.insertAdjacentElement('beforeend' , th2)
-                th3 = document.createElement('th')
-                th3.textContent = x[i].act;
-                tr1.insertAdjacentElement('beforeend' , th3)
-                th4 = document.createElement('th')
-                th4.textContent = x[i].content;
-                tr1.insertAdjacentElement('beforeend' , th4)
-
-            }
-        }
+    for (let x of mi) {
+        th = document.createElement('th');
+        th.textContent = x;
+        tr2.insertAdjacentElement('beforeend' , th);
     }
+
+    tr1 = document.createElement('tr');
+    table.insertAdjacentElement('beforeend' , tr1);
+    th1 = document.createElement('th')
+    th1.textContent = o[i].title;
+    tr1.insertAdjacentElement('beforeend' , th1)
+    th2 = document.createElement('th')
+    th2.textContent = o[i].subtitle;
+    tr1.insertAdjacentElement('beforeend' , th2)
+    th3 = document.createElement('th')
+    th3.textContent = o[i].act;
+    tr1.insertAdjacentElement('beforeend' , th3)
+    th4 = document.createElement('th')
+    th4.textContent = o[i].content;
+    tr1.insertAdjacentElement('beforeend' , th4)
+}
+}
+}
+else if (tyanneru === 'e1') {
+    if(data.list === null){
+        let p = document.createElement('p');
+        p.textContent = "そのジャンルの番組はありません。";
+        ul.insertAdjacentElement('afterend' , p);
+    } 
+    else {
+        let o = data.list.e1;
+    for (let i = 0; i < o.length; i++) {
+        let ul = document.querySelector('ul');
+table = document.createElement('table');
+ul.insertAdjacentElement('afterend' , table);
+tr2 = document.createElement('tr');
+table.insertAdjacentElement('beforeend' , tr2);
+
+for (let x of mi) {
+    th = document.createElement('th');
+    th.textContent = x;
+    tr2.insertAdjacentElement('beforeend' , th)
+}
+
+tr1 = document.createElement('tr');
+table.insertAdjacentElement('beforeend' , tr1);
+th1 = document.createElement('th')
+th1.textContent = x[i].title;
+tr1.insertAdjacentElement('beforeend' , th1)
+th2 = document.createElement('th')
+th2.textContent = x[i].subtitle;
+tr1.insertAdjacentElement('beforeend' , th2)
+th3 = document.createElement('th')
+th3.textContent = x[i].act;
+tr1.insertAdjacentElement('beforeend' , th3)
+th4 = document.createElement('th')
+th4.textContent = x[i].content;
+tr1.insertAdjacentElement('beforeend' , th4)
+  }
+}
+}
 }
 
 function showError(err) {
