@@ -2,30 +2,14 @@ let b = document.querySelector('button#print');
 b.addEventListener('click', Request);
 
 let kaisu = 0;
-//let tyanneru;
-//let bangumi;
 
 function Request() {
-let b = document.querySelectorAll('input[name="b"]');
-let c = document.querySelectorAll('input[name="a"]');
-let service = b.value;
-let genre = c.value;
+    let b = document.querySelectorAll('input[name="b"]');
+    let c = document.querySelectorAll('input[name="a"]');
+    let service = b.value;
+    let genre = c.value;
 
-/*for (let r of c) {
-    if (r.checked) {       
-        tyanneru = r.value;
-    }
-}
-
-let b = document.querySelectorAll('input[name="b"]');
-for (let l of b) {
-    if (l.checked) {        
-        bangumi = l.value;
-    }
-}
-*/
-
-let url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/' + service + '-' + genre + '-j.json';
+    let url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/' + service + '-' + genre + '-j.json';
 axios.get(url)
         .then(kensaku)   
         .catch(showError)   
@@ -134,36 +118,3 @@ function finish() {
     console.log('Ajax 通信が終わりました');
     kaisu = kaisu + 1; 
 }
-    
- /*   if (typeof data === 'string') {
-        data = JSON.parse(data);
-    }
-
-    // data をコンソールに出力
-    console.log(data);
-
-    // data.x を出力
-    if(thanneru === "g1") {
-        for (let n of data.list.g1) {
-            console.log(n.title);
-            let p = document.createElement('p');
-          }
-    } else {
-        for (let m of data.list.e1) {
-            console.log(m.title);
-        }
-    }
-
-    
-}
-
-// 通信エラーが発生した時の処理
-function showError(err) {
-    console.log(err);
-}
-
-// 通信の最後にいつも実行する処理
-function finish() {
-    console.log('Ajax 通信が終わりました');
-}
-*/
