@@ -202,7 +202,7 @@ let data = {
 /////////// 課題3-2 ここからプログラムを書こう
 
 let b = document.querySelector('#sendRequest');
-b.addEventListener('click' , sendRequest);
+b.addEventListener('click', sendRequest);
 
 let z = 0;
 
