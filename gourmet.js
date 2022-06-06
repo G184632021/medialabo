@@ -213,6 +213,7 @@ function sendRequest() {
   }
 
   z = 0;
+
     let e = document.querySelector('input[name="number"]');
     let key = e.value;
       let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/' + key + '.json';
@@ -256,18 +257,3 @@ function showError(err) {
 function finish() {
   console.log('Ajax 通信が終わりました');
 }
-
-
-/*
-<meta charset="utf-8">
-        <title>project.html</title>
-        <link rel="stylesheet" href="style2.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
-        <script src="gourmet.js" defer></script>
-        <teitle><h1>グルメ情報</h1></teitle>
-
-    </head>
-
-        <body>
-            <!-- put navigation menu just below here -->
-            */
