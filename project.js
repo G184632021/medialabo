@@ -8,8 +8,8 @@ let kaisu = 0;
 function Request() {
 let b = document.querySelectorAll('input[name="b"]');
 let c = document.querySelectorAll('input[name="a"]');
-let tyanneru = b.value;
-let bangumi = c.value;
+let service = b.value;
+let genre = c.value;
 
 /*for (let r of c) {
     if (r.checked) {       
@@ -25,7 +25,7 @@ for (let l of b) {
 }
 */
 
-let url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/' + tyanneru + '-' + bangumi + '-j.json';
+let url = 'https://www.nishita-lab.org/web-contents/jsons/nhk/' + service + '-' + genre + '-j.json';
 axios.get(url)
         .then(kensaku)   
         .catch(showError)   
@@ -34,7 +34,7 @@ axios.get(url)
 
 function kensaku(resp) {
     let b = document.querySelector('input[name="b"]');
-    let tyanneru = b.value;
+    let service = b.value;
     let data = resp.data;
     if (kaisu > 0) {
         let table1 = document.querySelectorAll('table')
@@ -49,7 +49,7 @@ function kensaku(resp) {
     
     //for (let x of data.list){
 
-        if (tyanneru === 'g1') {
+        if (service === 'g1') {
             if (data.list === null) {
                 let p = document.createElement('p');
                 p.textContent = "そのジャンルの番組はありません。";
@@ -63,9 +63,9 @@ function kensaku(resp) {
     tr2 = document.createElement('tr');
     table.insertAdjacentElement('beforeend' , tr2);
 
-    for (let x of mi) {
+    for (let w of mi) {
         th = document.createElement('th');
-        th.textContent = x;
+        th.textContent = w;
         tr2.insertAdjacentElement('beforeend' , th);
     }
 
@@ -86,7 +86,7 @@ function kensaku(resp) {
 }
 }
 }
-else if (tyanneru === 'e1') {
+else if (service === 'e1') {
     if(data.list === null){
         let p = document.createElement('p');
         p.textContent = "そのジャンルの番組はありません。";
@@ -101,10 +101,10 @@ ul.insertAdjacentElement('afterend' , table);
 tr2 = document.createElement('tr');
 table.insertAdjacentElement('beforeend' , tr2);
 
-for (let x of mi) {
+for (let w of mi) {
     th = document.createElement('th');
-    th.textContent = x;
-    tr2.insertAdjacentElement('beforeend' , th)
+    th.textContent = w;
+    tr2.insertAdjacentElement('beforeend' , th);
 }
 
 tr1 = document.createElement('tr');
@@ -127,7 +127,7 @@ tr1.insertAdjacentElement('beforeend' , th4)
 }
 
 function showError(err) {
-    console.log(err);
+    console.log(err)
 }
 
 function finish() {
