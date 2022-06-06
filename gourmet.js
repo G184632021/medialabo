@@ -214,7 +214,7 @@ function sendRequest() {
 
   z = 0;
 
-    let e = document.querySelector('input[name="number"]');
+    let e = document.querySelector('input[name="numbre"]');
     let key = e.value;
       let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/' + key + '.json';
 
