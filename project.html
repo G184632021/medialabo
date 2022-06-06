@@ -1,144 +1,120 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="tv-program.js"></script>
-        <title>project,html</title>
+        <meta charset="utf-8">
+        <title>project.html</title>
         <link rel="stylesheet" href="style2.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
-        <script src="project.js" defer></script>
-        <meta charset="utf-8">
+        <script src="gourmet.js" defer></script>
+        <teitle><h1>グルメ情報</h1></teitle>
+
     </head>
 
         <body>
-
-            <h1>NHKの番組情報</h1>
+            <!-- put navigation menu just below here -->
             
-            <div>
-                <label for="shimei">チャンネル: </label>
-                <input type="radio" id="contactChoice1"
-                name="a" value="g1">
-                <label for="contactChoice1">g1(NHK総合1)</label>
-                <input type="radio" id="contactChoice1"
-                name="a" value="e1">
-                <label for="contactChoice1">e1(Eテレ1)</label>
-            </div>
-            
-            <div>
-                <label for="shimei">番組: </label>
-                <input type="radio" id="a"
-                name="b" value="0000">
-                <label for="contactChoice1">0000</label>
-                <input type="radio" id="a"
-                name="b" value="0100">
-                <label for="contactChoice1">0100</label>
-                <input type="radio" id="a"
-                name="b" value="0205">
-                <label for="contactChoice1">0205</label>
-                <input type="radio" id="a"
-                name="b" value="0300">
-                <label for="contactChoice1">0300</label>
-                <input type="radio" id="a"
-                name="b" value="0409">
-                <label for="contactChoice1">0409</label>
-                <input type="radio" id="a"
-                name="b" value="0502">
-                <label for="contactChoice1">0502</label>
-                <input type="radio" id="a"
-                name="b" value="0600">
-                <label for="contactChoice1">0600</label>
-                <input type="radio" id="a"
-                name="b" value="0700">
-                <label for="contactChoice1">0700</label>
-                <input type="radio" id="a"
-                name="b" value="0800">
-                <label for="contactChoice1">0800</label>
-                <input type="radio" id="a"
-                name="b" value="0903">
-                <label for="contactChoice1">0903</label>
-                <input type="radio" id="a"
-                name="b" value="1000">
-                <label for="contactChoice1">1000</label>
-                <input type="radio" id="a"
-                name="b" value="1100">
-                <label for="contactChoice1">1100</label>
-            </div>
+            <input type="sendRequest" name="numbre" aize="10">
+            <button id="sendRequest">表示</button>
 
+            <table>
+                <link href="style2.css" rel="stylesheet" type="text/css">
+                <tr>
+                    <th>項目名</th>
+                    <th>項目名の説明</th>
+                    <th colspan="2">番号 → ジャンル</th>
+                </tr>
+                <tr>
+                    <td>access</td>
+                    <td>アクセス情報</td>
+                    <td colspan="2">G001 → 居酒屋</td>
+                </tr>
+                <tr>
+                    <td>address</td>
+                    <td>住所</td>
+                    <td colspan="2">G002 → ダイニングバー・バル</td>
+                </tr>
+                <tr>
+                    <td>budget.name</td>
+                    <td>予算</td>
+                    <td colspan="2">G003 → 創作料理</td>
+                </tr>
+                <tr>
+                    <td>catch</td>
+                    <td>キャッチコピー</td>
+                    <td colspan="2">G004 → 和食</td>
+                </tr>
+                <tr>
+                    <td>genre.name</td>
+                    <td>ジャンル</td>
+                    <td colspan="2">G005 → 洋食</td>
+                </tr>
+                <tr>
+                    <td>name</td>
+                    <td>店舗名</td>
+                    <td colspan="2">G006 → イタリアン・フレンチ</td>
+                </tr>
+                <tr>
+                    <td>open</td>
+                    <td>営業日時</td>
+                    <td colspan="2">G007 → 中華</td>
+                </tr>
+                <tr>
+                    <td>station_name</td>
+                    <td>最寄駅</td>
+                    <td colspan="2">G008 → 焼肉・ホルモン</td>
+                </tr>
+                <tr>
+                    <td>subgenre.name</td>
+                    <td>サブジャンルの名前</td>
+                    <td colspan="2">G009 → アジア・エスニック料理</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">G010 → 各国料理</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">G011 → カラオケ・パーティ</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">G012 → バー・カクテル</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">G013 → ラーメン</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">G014 → カフェ・スイーツ</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">G015 → その他グルメ</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">G016 → お好み焼き・もんじゃ</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">G017 → 韓国料理</td>
+                </tr>
+    
+                
+    
+            </table>
 
-            <button id="print">表示</button>
-
-            
-
-        <table>
-            <link href="style2.css" rel="stylesheet" type="text/css">
-            <tr>
-                <th>項目名</th>
-                <th>項目名の説明</th>
-                <th colspan="2">番号 → ジャンル</th>
-            </tr>
-            <tr>
-                <td>start_time</td>
-                <td>番組開始時刻</td>
-                <td colspan="2">0000 → ニュース・報道</td>
-            </tr>
-            <tr>
-                <td>end_time</td>
-                <td>番組終了時刻</td>
-                <td colspan="2">0100 → スポーツ</td>
-            </tr>
-            <tr>
-                <td>service.name</td>
-                <td>チャンネル</td>
-                <td colspan="2">0205 → 情報・ワイドショー</td>
-            </tr>
-            <tr>
-                <td>title</td>
-                <td>番組名</td>
-                <td colspan="2">0300 → ドラマ</td>
-            </tr>
-            <tr>
-                <td>subtitle</td>
-                <td>番組サブタイトル</td>
-                <td colspan="2">0409 → 音楽</td>
-            </tr>
-            <tr>
-                <td>content</td>
-                <td>番組説明文</td>
-                <td colspan="2">0502 → バラエティ</td>
-            </tr>
-            <tr>
-                <td>act</td>
-                <td>出演者</td>
-                <td colspan="2">0600 → 映画</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td colspan="2">0700 → アニメ</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td colspan="2">0800 → ドキュメンタリー・教養</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td colspan="2">0903 → 劇場・公演</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td colspan="2">1000 → 趣味・教育</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td colspan="2">1100 → 福祉</td>
-            </tr>
-
-            
-
-        </table>
+            <p id="access"><span id ="x"></span></p>
+           
 
 
         </body>
