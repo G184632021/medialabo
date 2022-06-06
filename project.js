@@ -110,16 +110,16 @@ for (let x of mi) {
 tr1 = document.createElement('tr');
 table.insertAdjacentElement('beforeend' , tr1);
 th1 = document.createElement('th')
-th1.textContent = x[i].title;
+th1.textContent = o[i].title;
 tr1.insertAdjacentElement('beforeend' , th1)
 th2 = document.createElement('th')
-th2.textContent = x[i].subtitle;
+th2.textContent = o[i].subtitle;
 tr1.insertAdjacentElement('beforeend' , th2)
 th3 = document.createElement('th')
-th3.textContent = x[i].act;
+th3.textContent = o[i].act;
 tr1.insertAdjacentElement('beforeend' , th3)
 th4 = document.createElement('th')
-th4.textContent = x[i].content;
+th4.textContent = o[i].content;
 tr1.insertAdjacentElement('beforeend' , th4)
   }
 }
