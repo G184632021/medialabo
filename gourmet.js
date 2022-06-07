@@ -240,6 +240,13 @@ function showResult(resp) {
 
   // data.x を出力
   for(let n of data.results.shop){
+    console.log(n.access);
+    let p = document.createElement('p');
+    p.textContent = n.access;
+    ta.insertAdjacentElement('afterend' , p);
+    z++;
+  }
+  for(let n of data.results.shop){
     console.log(n.name);
     let p = document.createElement('p');
     p.textContent = n.name;
