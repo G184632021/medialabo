@@ -246,7 +246,15 @@ function showResult(resp) {
     ta.insertAdjacentElement('afterend' , p);
     z++;
   }
+  for(let n of data.results.shop){
+    console.log(n.open);
+    let p = document.createElement('p');
+    p.textContent = n.open;
+    ta.insertAdjacentElement('afterend' , p);
+    z++;
+  }
 }
+
 
 // 通信エラーが発生した時の処理
 function showError(err) {
