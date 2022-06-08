@@ -247,6 +247,13 @@ function showResult(resp) {
     z++;
   }
   for(let n of data.results.shop){
+    console.log(n.access);
+    let p = document.createElement('p');
+    p.textContent = n.address;
+    ta.insertAdjacentElement('afterend' , p);
+    z++;
+  }
+  for(let n of data.results.shop){
     console.log(n.name);
     let p = document.createElement('p');
     p.textContent = n.name;
